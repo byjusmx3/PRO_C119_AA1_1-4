@@ -10,10 +10,10 @@ tracker = cv2.TrackerCSRT_create()
 # Lee el primer cuadro del video
 returned, img = video.read()
 
-# Selecciona el cuadro delimitador de la imagen
+# Selecciona el campo delimitador de la imagen
 bbox = cv2.selectROI("Tracking", img, False)
 
-# Inicializa el rastreador en la imagen y el cuadro delimitador
+# Inicializa el rastreador en la imagen y el campo delimitador
 tracker.init(img, bbox)
 
 print(bbox)
