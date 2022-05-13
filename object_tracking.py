@@ -4,16 +4,16 @@ import math
 
 video = cv2.VideoCapture("bb3.mp4")
 
-# Load tracker 
+# Carga el rastreador 
 tracker = cv2.TrackerCSRT_create()
 
-# Read the first frame of the video
+# Lee el primer cuadro del video
 returned, img = video.read()
 
-# Select the bounding box on the image
+# Selecciona el cuadro delimitador de la imagen
 bbox = cv2.selectROI("Tracking", img, False)
 
-# Initialise the tracker on the img and the bounding box
+# Inicializa el rastreador en la imagen y el cuadro delimitador
 tracker.init(img, bbox)
 
 print(bbox)
